@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import AboutPage from './Pages/AboutPage/AboutPage';
 
 function App() {
   return (
     <div className="App">
-      
+      <AboutPage />
     </div>
   );
 }
