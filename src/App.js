@@ -5,6 +5,7 @@ import HeroBlock from './Components/HomeComponents/Hero/Hero';
 // import AboutPage from './Pages/AboutPage/AboutPage';
 import Navbar from './Layout/Navbar/Navbar';
 import HomeIcons from './Components/HomeComponents/HomeIcons/HomeIcons';
+import ProgressBar from './Components/Custom-ProgessBar/ProgessBar';
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
       {/* <AboutPage /> */}
       <HeroBlock />
       <HomeIcons />
+      <ProgressBar done="70" />
+      
+
     </div>
   );
 }
