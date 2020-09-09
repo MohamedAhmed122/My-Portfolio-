@@ -61,6 +61,7 @@
     font-size: 2.4rem;
     margin-bottom: 4rem;
     line-height: 2rem;
+    width: 70vw;
 }
 .btn{
     background: #0097a7;
@@ -83,6 +84,6 @@
 
 @media(max-width: 760px){
 .Typical{
-    line-height: 3rem;
+    /* line-height: 3rem; */
 }
 }

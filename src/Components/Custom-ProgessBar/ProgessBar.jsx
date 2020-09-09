@@ -4,17 +4,17 @@ import './Style.css'
 
 const ProgressBar = ({done}) => {
     const [style, setStyle] = useState({});
-    const [progress,setProgress] = useState(false)
+    // const [progress,setProgress] = useState(false)
    
   
-    const handleNav=()=>{
-      if (window.scrollY >= 490 || window.screenY >= 490){
-        setProgress(true)
-      }else{
-        setProgress(false)
-      }
-    }
-    window.addEventListener('scroll',handleNav)
+    // const handleNav=()=>{
+    //   if (window.scrollY >= 430 || window.screenY >= 430){
+    //     setProgress(true)
+    //   }else{
+    //     setProgress(false)
+    //   }
+    // }
+    // window.addEventListener('scroll',handleNav)
 	
 	setTimeout(() => {
 		const newStyle = {
@@ -23,11 +23,11 @@ const ProgressBar = ({done}) => {
 		}
 		
 		setStyle(newStyle);
-	}, 200);
+	}, 5000);
 	
 	return (
-		<div className="progress" style={{marginTop: '12rem'}}>
-			<div className={progress? 'progress-active': 'progress-done'} style={style}>
+		<div className="progress" style={{marginTop: '0.2rem', marginBottom: '0.9rem'}}>
+			<div className='progress-active' style={style}>
 				{done}%
 			</div>
 		</div>

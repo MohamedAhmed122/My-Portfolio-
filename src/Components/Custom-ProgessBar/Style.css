@@ -19,7 +19,7 @@
 	height: 100%;
 	width: 0;
 	opacity: 0;
-	transition: 1s ease 2s;
+	transition: 1s ease 1s;
 }
 .progress-done {
     /* background: transparent; */
@@ -32,5 +32,11 @@
 	height: 100%;
 	width: 0;
 	opacity: 0;
-	transition: 1s ease 5s;
+	transition: 1s ease 1s;
+}
+
+@media(max-width: 1000px){
+	.progress{
+		width: 65vw;
+	}
 }

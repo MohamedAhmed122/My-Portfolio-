@@ -20,9 +20,9 @@ const HeroBlock = () => (
             I'm Mohamed Youssef <span>.</span>
         </h2>
         <Typical className='Typical'
-            steps={[" Frontend Developer", 1000, "Frontend Developer, and Web Designer", 500]}
+            steps={[" Front-End Developer ", 1000, "Front-End Developer, and Web Designer", 1000]}
             loop={Infinity}
-            wrapper="h2"
+            wrapper="h3"
             />
         <button className="btn">View My Work </button>
         </div>
