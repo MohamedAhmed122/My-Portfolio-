@@ -1,0 +1,38 @@
+
+
+.footer{
+    background-color: #80deea;
+    color: white;
+    line-height: 20px;
+    position: absolute;
+    width: 100%;
+}
+.art{
+    position: relative;
+    background-color: #0097a7;
+    padding: 16px;
+    padding-top: 76px;
+    clip-path: polygon(0% 15%, 35% 0%, 100% 15%, 100% 100%, 0% 100%);
+}
+.social, .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.social a{
+    color: white;
+   margin-left: 1rem;
+   
+}
+.social a:hover{
+    color:#80deea;
+}
+.text h5{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+.text span{
+    font-family: "Fugaz One", cursive; 
+    color:#80deea;
+}

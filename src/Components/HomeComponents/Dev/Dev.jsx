@@ -11,7 +11,7 @@ const Dev = () => {
       container
       alignItems="center"
       justify="space-around"
-      style={{ marginTop: "10rem" }}
+      style={{ marginTop: "10rem",marginBottom: "10rem" }}
     >
       <Grid item>
         <img className={classes.img} src={Me} alt="Mohamed Youssef" />
