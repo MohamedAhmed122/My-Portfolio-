@@ -7,6 +7,7 @@ import Navbar from './Layout/Navbar/Navbar';
 import HomeIcons from './Components/HomeComponents/HomeIcons/HomeIcons';
 import Dev from './Components/HomeComponents/Dev/Dev';
 import Footer from './Layout/Navbar/Footer';
+import Projects from './Components/HomeComponents/Projects/Projects';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <HeroBlock />
       <HomeIcons />
       <Dev  /> 
+      <Projects />
       <Footer />
+     
 
     </div>
   );

@@ -23,7 +23,7 @@ const ProgressBar = ({done}) => {
 		}
 		
 		setStyle(newStyle);
-	}, 5000);
+	},7000);
 	
 	return (
 		<div className="progress" style={{marginTop: '0.2rem', marginBottom: '0.9rem'}}>
