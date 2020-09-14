@@ -5,7 +5,7 @@ import SpeedIcon from "@material-ui/icons/Speed";
 import ImportantDevicesIcon from "@material-ui/icons/ImportantDevices";
 import WbIncandescentIcon from "@material-ui/icons/WbIncandescent";
 import CardMembershipIcon from "@material-ui/icons/CardMembership";
-
+import Dev from '../Dev/Dev'
 import useStyles from "./Style";
 
 const HomeIcons = () => {
@@ -103,6 +103,7 @@ const HomeIcons = () => {
             </Typography>
             </Grid>
         </Grid>
+        <Dev />
     </Fragment>
   );
 };
