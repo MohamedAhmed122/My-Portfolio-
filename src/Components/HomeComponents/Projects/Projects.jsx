@@ -1,123 +1,137 @@
-import React, { Fragment } from 'react'
-import project7 from '../../../assets/project7.png'
+import React, { Fragment } from "react";
+import covid from "../../../assets/covid.png";
+import herbs from "../../../assets/herbs.png";
+import shoty from "../../../assets/shoty.png";
+import alan from "../../../assets/alan.png";
+import hang from "../../../assets/hang.png";
+import face from "../../../assets/face.png";
+import hulu from "../../../assets/hulu.png";
+import qu from '../../../assets/qu.png'
 
-import './Styles.css'
 
-const Projects =()=>(
-    <Fragment  >
-       <section id="work-a" class="text-center py-3">
-      <div class="container">
-       <div className='main-text'>
-           <div className='after'></div>
-           <h2>My Projects</h2>
-           <div className='before'></div>
-       </div>
-        <div class="items">
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">React & Material UI React</p>
-                <h2 class="item-text-title">Covid-19 Tracker</h2>
-                <button className='repo'>visit github</button>
-                <button className='web'>visit website</button>
-              </div>
-            </div>
+
+import "./Styles.css";
+
+const Projects = () => {
+  const projects = ProjectItems;
+  return (
+    <Fragment>
+      <section id="work-a" class="text-center py-3">
+        <div class="container">
+          <div className="main-text">
+            <div className="after"></div>
+            <h2>My Projects</h2>
+            <div className="before"></div>
           </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">UI/UX</p>
-                <h2 class="item-text-title">World Experience</h2>
+
+          <div class="items">
+            {
+              projects.map(project =>(
+                <div key={project.id} class="item">
+                <div class="item-image">
+                  <img src={project.img} alt="" />
+                </div>
+  
+                <div class="item-text">
+                  <div class="item-text-wrap">
+                    <p class="item-text-category">{project.tool}</p>
+                    <h2 class="item-text-title">{project.name}</h2>
+                    <button className="repo">visit github</button>
+                    <button className="web">visit website</button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Photography &</p>
-                <h2 class="item-text-title">Vanishing</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Design</p>
-                <h2 class="item-text-title">Gap INC</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Mobile UI Design</p>
-                <h2 class="item-text-title">Face THe Experience</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Design Concept</p>
-                <h2 class="item-text-title">Bezier Curves</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Photography</p>
-                <h2 class="item-text-title">Dock Ponder</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Web Applications</p>
-                <h2 class="item-text-title">Restaurant App</h2>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="item-image">
-              <img src={project7} alt="" />
-            </div>
-            <div class="item-text">
-              <div class="item-text-wrap">
-                <p class="item-text-category">Social Network Concept</p>
-                <h2 class="item-text-title">FriendFeed</h2>
-              </div>
-            </div>
+              ))
+            }
           </div>
         </div>
-      </div>
-    </section>
-
+      </section>
     </Fragment>
-)
-export default Projects
+  );
+};
+export default Projects;
+
+const ProjectItems = [
+  {
+    id: 1,
+    name: "Our Event (Hangout Club)",
+    tool: "React, Redux & Firebase",
+    img: hang,
+    githubLink: "https://github.com/MohamedAhmed122/Our-event",
+    websiteLink: "https://re-vents-e73b4.firebaseapp.com",
+    more: "",
+  },
+  {
+    id: 2,
+    name: "Newspaper Reader",
+    tool: "Alan Ai & React",
+    img: alan,
+    githubLink: "https://github.com/MohamedAhmed122/Alan-ai-News-app",
+    websiteLink: "https://alan-ai-newsreader.web.app/",
+    more: "",
+  },
+  {
+    id: 3,
+    name: "SHOTY Clothing App",
+    tool: "React, Redux & Firebase",
+    img: shoty,
+    githubLink: "https://github.com/MohamedAhmed122/Shoty",
+    websiteLink: "https://shoty-app.herokuapp.com",
+    more: "",
+  },
+  {
+    id: 4,
+    name: "Facebook Clone",
+    tool: "React, Redux & Firebase",
+    img:face,
+    githubLink: "https://github.com/MohamedAhmed122/Facebook-Clone",
+    websiteLink: "https://facebook-clone-490bc.web.app",
+    more: "Simple Cone",
+  },
+  {
+    id: 5,
+    name: "Covid-19 Tracker",
+    tool: "React & Material UI",
+    img: covid,
+    githubLink: "https://github.com/MohamedAhmed122/Covid-19",
+    websiteLink: "https://covid1-19.herokuapp.com",
+    more: "",
+  },
+  {
+    id: 6,
+    name: "Herbs Trade",
+    tool: "React & Material UI",
+    img: herbs,
+    githubLink: "https://github.com/MohamedAhmed122/Herbs-Trade",
+    websiteLink: "https://dreamy-heisenberg-d906bc.netlify.app",
+    more: "I should have sold it",
+  },
+  {
+    id: 7,
+    name: "Slack Clone",
+    tool: "React",
+    img:
+      "https://www.nonprofitmarketingguide.com/blog/wp-content/uploads/2019/07/slacklogo.png",
+    githubLink: "",
+    websiteLink: "",
+    more: "Working on it",
+  },
+  {
+    id: 8,
+    name: "Hulu Clone",
+    tool: "React & Material UI",
+    img:hulu,
+    githubLink: "https://github.com/MohamedAhmed122/Hulu",
+    websiteLink: "https://hulu-33bd6.web.app",
+    more: "Simple Clone",
+  },
+  {
+    id: 9,
+    name: "Your Project is coming Next",
+    tool: "",
+    img: "",
+    githubLink: "",
+    websiteLink: "",
+    more:qu,
+  },
+];
