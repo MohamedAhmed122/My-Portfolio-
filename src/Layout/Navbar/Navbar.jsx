@@ -29,7 +29,9 @@ const Navbar = () => {
           <Typography className={classes.logo}>LOGO</Typography>
           <Tabs className={classes.tabs}>
               <Tab className={classes.tab} label="Home" />
+              <Tab className={classes.tab} label="About" />
               <Tab className={classes.tab} label="Work" />
+              <Tab className={classes.tab} label="Contact" />
           </Tabs>
         </Toolbar>
       </AppBar>

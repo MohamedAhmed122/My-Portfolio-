@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import HeroBlock from './Components/HomeComponents/Hero/Hero';
-// import AboutPage from './Pages/AboutPage/AboutPage';
+import Contact from './Components/Contact/Contact'
 import Navbar from './Layout/Navbar/Navbar';
 import HomeIcons from './Components/HomeComponents/HomeIcons/HomeIcons';
 import Dev from './Components/HomeComponents/Dev/Dev';
@@ -18,6 +18,7 @@ function App() {
       <HomeIcons />
       <Dev  /> 
       <Projects />
+      <Contact />
       <Footer />
      
 

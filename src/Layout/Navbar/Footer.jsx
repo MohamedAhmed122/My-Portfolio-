@@ -5,12 +5,15 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import MailIcon from "@material-ui/icons/Mail";
 
+
+
 import "./Styles.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="art">
+        {/* <Contact /> */}
         <div className="social">
           <a className="link" href="#lab">
             <FacebookIcon fontSize="large" />
