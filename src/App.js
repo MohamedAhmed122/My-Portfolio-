@@ -15,10 +15,6 @@ function App() {
       <Navbar />
       {/* <AboutPage /> */}
       <HeroBlock />
-      <HomeIcons />
-      <Dev  /> 
-      <Projects />
-      <Contact />
       <Footer />
      
 

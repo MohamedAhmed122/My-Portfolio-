@@ -14,25 +14,25 @@ const Projects = () => {
   const projects = ProjectItems;
   return (
     <Fragment>
-      <section id="work-a" class="text-center py-3">
-        <div class="container">
+      <section id="work-a" className="text-center py-3">
+        <div className="container">
           <div className="main-text">
             <div className="after"></div>
             <h2>My Projects</h2>
             <div className="before"></div>
           </div>
 
-          <div class="items">
+          <div className="items">
             {projects.map((project) => (
-              <div key={project.id} class="item">
-                <div class="item-image">
+              <div key={project.id} className="item">
+                <div className="item-image">
                   <img src={project.img} alt="" />
                 </div>
 
-                <div class="item-text">
-                  <div class="item-text-wrap">
-                    <p class="item-text-category">{project.tool}</p>
-                    <h2 class="item-text-title">{project.name}</h2>
+                <div className="item-text">
+                  <div className="item-text-wrap">
+                    <p className="item-text-category">{project.tool}</p>
+                    <h2 className="item-text-title">{project.name}</h2>
                     <button className="repo">
                       <a
                         style={{ color: "#00bcd4" }}

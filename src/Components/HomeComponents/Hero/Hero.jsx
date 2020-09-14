@@ -20,7 +20,7 @@ const HeroBlock = () => (
             I'm Mohamed Youssef <span>.</span>
         </h2>
         <Typical className='Typical'
-            steps={[" Front-End Developer ", 1000, "Front-End Developer, and Web Designer", 1000]}
+            steps={[" Front-End Developer ", 100, "Front-End Developer, and Web Designer", 1000]}
             loop={Infinity}
             wrapper="h3"
             />

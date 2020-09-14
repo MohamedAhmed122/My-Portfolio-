@@ -1,4 +1,4 @@
-import React, { Fragment ,useState} from "react";
+import React, { useState} from "react";
 import {
   AppBar,
   Toolbar,
@@ -8,6 +8,12 @@ import {
 } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core";
+import { ScrollingProvider, SectionLink, Section } from 'react-scroll-section';
+import Projects from "../../Components/HomeComponents/Projects/Projects";
+import ContactForm from "../../Components/Contact/Contact";
+import Hero from '../../Components/HomeComponents/Hero/Hero'
+import HomeIcons from '../../Components/HomeComponents/HomeIcons/HomeIcons'
+
 
 const Navbar = () => {
   const [nav,setNav] = useState(false)
@@ -23,19 +29,40 @@ const Navbar = () => {
   window.addEventListener('scroll',handleNav)
 
   return (
-    <Fragment>
+    <ScrollingProvider>
+
       <AppBar className={nav ? classes.appBarActive : classes.appBar}>
         <Toolbar>
           <Typography className={classes.logo}>LOGO</Typography>
           <Tabs className={classes.tabs}>
-              <Tab className={classes.tab} label="Home" />
-              <Tab className={classes.tab} label="About" />
-              <Tab className={classes.tab} label="Work" />
-              <Tab className={classes.tab} label="Contact" />
+          <SectionLink section="Home">
+              {({ onClick, isSelected }) => (
+                <Tab onClick={onClick} selected={isSelected} className={classes.tab} label="Home" />
+              )}
+          </SectionLink>
+          <SectionLink section="About">
+              {({ onClick, isSelected }) => (
+                <Tab onClick={onClick} selected={isSelected} className={classes.tab} label="About" />
+              )}
+          </SectionLink>
+          <SectionLink section="Work">
+              {({ onClick, isSelected }) => (
+                <Tab onClick={onClick} selected={isSelected} className={classes.tab} label="Work" />
+              )}
+          </SectionLink>
+          <SectionLink section="Contact">
+              {({ onClick, isSelected }) => (
+                <Tab onClick={onClick} selected={isSelected} className={classes.tab} label="Contact" />
+              )}
+          </SectionLink>
           </Tabs>
         </Toolbar>
       </AppBar>
-    </Fragment>
+      <Section id="Home"><Hero /></Section>
+      <Section id="About"><HomeIcons /></Section>
+      <Section id="Work"><Projects /></Section>
+      <Section id="Contact"><ContactForm /></Section>
+    </ScrollingProvider>
   );
 };
 
