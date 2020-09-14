@@ -15,14 +15,8 @@ const Navbar = () => {
   const [nav,setNav] = useState(false)
   const classes = useStyles();
 
-  const handleScrollWork =()=>{
-    window.scrollTo({top:2120,behavior: 'smooth'})
-  }
-  const handleScrollAbout =()=>{
-    window.scrollTo({top:850,behavior: 'smooth'})
-  }
-  const handleScrollContact =()=>{
-    window.scrollTo({top:3420,behavior: 'smooth'})
+  const handleScroll =(value)=>{
+    window.scrollTo({top:value,behavior: 'smooth'})
   }
   
   const handleNav=()=>{
@@ -38,12 +32,14 @@ const Navbar = () => {
     <Fragment>
       <AppBar className={nav ? classes.appBarActive : classes.appBar}>
         <Toolbar>
-          <Typography className={classes.logo}>LOGO</Typography>
+          <div className={classes.logoContainer}>
+          <Typography className={classes.logo}>MY</Typography>
+          </div>
           <Tabs className={classes.tabs}>
-              <Tab className={classes.tab} label="Home" />
-              <Tab className={classes.tab} onClick={()=>handleScrollAbout()} label="About" />
-              <Tab className={classes.tab} onClick={()=>handleScrollWork()} label="Work" />
-              <Tab className={classes.tab} onClick={()=>handleScrollContact()} label="Contact" />
+              <Tab className={classes.tab} onClick={()=>handleScroll(0)}  label="Home" />
+              <Tab className={classes.tab} onClick={()=>handleScroll(850)} label="About" />
+              <Tab className={classes.tab} onClick={()=>handleScroll(2120)} label="Work" />
+              <Tab className={classes.tab} onClick={()=>handleScroll(3440)} label="Contact" />
           </Tabs>
         </Toolbar>
       </AppBar>
@@ -56,6 +52,7 @@ export default Navbar;
 const useStyles =  makeStyles((theme) => ({
   appBar: {
     background: 'transparent',
+    
   },
   appBarActive:{
     background: '#0097a7',
@@ -75,6 +72,24 @@ const useStyles =  makeStyles((theme) => ({
       borderBottom: "3px solid white",
     },
   },
+  logoContainer:{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '0.5rem 4rem',
+    backgroundColor: 'white',
+    height: '5rem',
+    width: '5rem',
+    borderRadius: '50%',
+    border: '2px solid #0097a7'
+  },
+  logo:{
+    color:'#0097a7',
+    textAlign: 'center',
+    fontFamily: 'Fugaz One, cursive',
+    fontSize: '2.5rem'
+  }
+
 }));
 
 

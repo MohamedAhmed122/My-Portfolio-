@@ -33,26 +33,30 @@ const Projects = () => {
                   <div className="item-text-wrap">
                     <p className="item-text-category">{project.tool}</p>
                     <h2 className="item-text-title">{project.name}</h2>
-                    <button className="repo">
-                      <a
-                        style={{ color: "#00bcd4" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={project.githubLink}
-                      >
-                        visit github
-                      </a>
-                    </button>
-                    <button className="web">
-                      <a
-                        style={{ color: "white" }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={project.websiteLink}
-                      >
-                        visit website
-                      </a>
-                    </button>
+                    {project.githubLink === ''? null:
+                    <div>
+                      <button className="repo">
+                        <a
+                          style={{ color: "#00bcd4" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.githubLink}
+                        >
+                          visit github
+                        </a>
+                      </button>
+                      <button className="web">
+                        <a
+                          style={{ color: "white" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={project.websiteLink}
+                        >
+                          visit website
+                        </a>
+                      </button>
+                    </div>
+                    }
                     <p style={{marginTop: '1rem'}}>{project.more}</p>
                   </div>
                 </div>
@@ -91,7 +95,7 @@ const ProjectItems = [
     tool: "React, Redux & Firebase",
     img: shoty,
     githubLink: "https://github.com/MohamedAhmed122/Shoty",
-    websiteLink: "https://shoty-app.herokuapp.com",
+    websiteLink: "https://shoty-db.web.app/",
     more: "Uncompleted",
   },
   {
@@ -136,7 +140,7 @@ const ProjectItems = [
     tool: "React",
     img:
       "https://www.nonprofitmarketingguide.com/blog/wp-content/uploads/2019/07/slacklogo.png",
-    githubLink: "",
+    githubLink: '',
     websiteLink: "",
     more: "Working on it",
   },
