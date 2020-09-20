@@ -3,6 +3,7 @@ import { Grid, TextField, Button, Typography } from "@material-ui/core";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
 import useStyles from "./Style";
 import {db} from '../../firebase'
+import MainText from '../MainText/MainText'
 
 const ContactForm = () => {
   const classes = useStyles();
@@ -30,19 +31,7 @@ const ContactForm = () => {
   };
   return (
     <Fragment>
-        <Grid
-            container
-            item
-            alignItems="center"
-            justify="center"
-            style={{ marginTop: "4rem" }}
-        >
-            <div className={classes.before}></div>
-            <Typography variant="h2" className={classes.main}>
-            Contact me
-            </Typography>
-            <div className={classes.after}></div>
-        </Grid>
+        <MainText>Contact me</MainText>
         <Grid
             container
             alignItems="center"

@@ -6,6 +6,14 @@ export default makeStyles((theme) => ({
     input:{
         width:'30vw',
         margin: '2rem 5rem',
+        [theme.breakpoints.down("sm")]: {
+            width:'60vw',
+            margin: '2rem 7rem',
+        },
+        [theme.breakpoints.down("xs")]: {
+            margin: '2rem 3rem',
+            width:'70vw',
+        },
        
     },
     div:{
@@ -32,37 +40,22 @@ export default makeStyles((theme) => ({
             border: '2px solid #0097a7',
             color: '#0097a7',
             borderRadius: '105px'
-        }
-    },
-    main: {
-        fontFamily: "Fugaz One, cursive",
-        color: "#333",
-        marginBottom: '5rem'
-    },
-    after: {
-        borderBottom: "2px solid #00bcd4",
-        width: "10rem",
-        display: "block",
-        marginLeft: "2rem",
-        marginBottom: '5rem',
-        [theme.breakpoints.down("xs")]: {
-            width: "5rem",
-            marginLeft: "1rem",
         },
-    },
-    before: {
-        borderBottom: "2px solid #00bcd4",
-        width: "10rem",
-        display: "block",
-        marginRight: "2rem",
-        marginBottom: '5rem',
+        [theme.breakpoints.down("sm")]: {
+            width:'40vw',
+        },
         [theme.breakpoints.down("xs")]: {
-            width: "5rem",
-            marginRight: "1rem",
+            width:'70vw',
         },
     },
     bigInput:{
-        width: '60vw'
+        width: '60vw',
+        [theme.breakpoints.down("sm")]: {
+            width:'70vw',
+        },
+        [theme.breakpoints.down("xs")]: {
+            width:'90vw',
+        },
     },
     root: {
         border: 'none',
