@@ -83,7 +83,11 @@
 }
 
 @media(max-width: 760px){
+.h2{
+    font-size: 1.7rem;
+}
 .Typical{
-    /* line-height: 3rem; */
+    line-height: 3rem;
+    font-size: 1.5rem;
 }
 }

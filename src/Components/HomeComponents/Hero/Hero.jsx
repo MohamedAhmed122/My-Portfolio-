@@ -5,6 +5,7 @@ import "./Styles.css";
 import { Button } from "@material-ui/core";
 
 const HeroBlock = () => {
+
     const handleScroll =()=>{
         window.scrollTo({top:2120,behavior: 'smooth'})
     }

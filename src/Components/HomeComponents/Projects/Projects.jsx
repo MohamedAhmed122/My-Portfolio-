@@ -8,20 +8,16 @@ import face from "../../../assets/face.png";
 import hulu from "../../../assets/hulu.png";
 import qu from "../../../assets/qu.png";
 
-import "./Styles.css";
+import "./ProjectStyle.css";
+import MainText from "../../MainText/MainText";
 
 const Projects = () => {
   const projects = ProjectItems;
   return (
     <Fragment>
       <section id="work-a" className="text-center py-3">
+          <MainText>My Projects</MainText>
         <div className="container">
-          <div className="main-text">
-            <div className="after"></div>
-            <h2>My Projects</h2>
-            <div className="before"></div>
-          </div>
-
           <div className="items">
             {projects.map((project) => (
               <div key={project.id} className="item">
@@ -33,31 +29,31 @@ const Projects = () => {
                   <div className="item-text-wrap">
                     <p className="item-text-category">{project.tool}</p>
                     <h2 className="item-text-title">{project.name}</h2>
-                    {project.githubLink === ''? null:
-                    <div>
-                      <button className="repo">
-                        <a
-                          style={{ color: "#00bcd4" }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={project.githubLink}
-                        >
-                          visit github
-                        </a>
-                      </button>
-                      <button className="web">
-                        <a
-                          style={{ color: "white" }}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          href={project.websiteLink}
-                        >
-                          visit website
-                        </a>
-                      </button>
-                    </div>
-                    }
-                    <p style={{marginTop: '1rem'}}>{project.more}</p>
+                    {project.githubLink === "" ? null : (
+                      <div>
+                        <button className="repo">
+                          <a
+                            style={{ color: "#00bcd4" }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={project.githubLink}
+                          >
+                            visit github
+                          </a>
+                        </button>
+                        <button className="web">
+                          <a
+                            style={{ color: "white" }}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={project.websiteLink}
+                          >
+                            visit website
+                          </a>
+                        </button>
+                      </div>
+                    )}
+                    <p style={{ marginTop: "1rem" }}>{project.more}</p>
                   </div>
                 </div>
               </div>
@@ -140,7 +136,7 @@ const ProjectItems = [
     tool: "React",
     img:
       "https://www.nonprofitmarketingguide.com/blog/wp-content/uploads/2019/07/slacklogo.png",
-    githubLink: '',
+    githubLink: "",
     websiteLink: "",
     more: "Working on it",
   },

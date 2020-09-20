@@ -35,7 +35,7 @@ const Footer = () => {
             <WhatsAppIcon fontSize="large" />
           </a>
         </div>
-        <div className="text">
+        <div className="textFooter">
           <h5> © <span className='span'>Mohamed Youssef </span>2020</h5>
         </div>
       </div>

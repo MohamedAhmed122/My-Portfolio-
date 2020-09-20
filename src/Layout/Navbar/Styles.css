@@ -28,11 +28,12 @@
 .social a:hover{
     color:#80deea;
 }
-.text h5{
+.textFooter h5{
     margin-top: 1rem;
     font-size: 1.3rem;
+    text-align: center;
 }
-.text span{
+.textFooter span{
     font-family: "Fugaz One", cursive; 
     color:#80deea;
 }

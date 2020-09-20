@@ -5,6 +5,7 @@ import {
   Tabs,
   Tab,
   Typography,
+  Hidden,
 } from "@material-ui/core";
 
 import { makeStyles } from "@material-ui/core";
@@ -12,11 +13,23 @@ import { makeStyles } from "@material-ui/core";
 
 
 const Navbar = () => {
+
+const [value, setValueTab] = useState(0);
+
+const handleChange = (event, newValue) => {
+    setValueTab(newValue);
+};
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
   const [nav,setNav] = useState(false)
   const classes = useStyles();
 
-  const handleScroll =(value)=>{
-    window.scrollTo({top:value,behavior: 'smooth'})
+  const handleScroll =(values)=>{
+    window.scrollTo({top:values,behavior: 'smooth'})
   }
   
   const handleNav=()=>{
@@ -28,18 +41,22 @@ const Navbar = () => {
   }
   window.addEventListener('scroll',handleNav)
 
+
   return (
     <Fragment>
       <AppBar className={nav ? classes.appBarActive : classes.appBar}>
         <Toolbar>
-          <div className={classes.logoContainer}>
-          <Typography className={classes.logo}>MY</Typography>
-          </div>
-          <Tabs className={classes.tabs}>
-              <Tab className={classes.tab} onClick={()=>handleScroll(0)}  label="Home" />
-              <Tab className={classes.tab} onClick={()=>handleScroll(850)} label="About" />
-              <Tab className={classes.tab} onClick={()=>handleScroll(2120)} label="Work" />
-              <Tab className={classes.tab} onClick={()=>handleScroll(3440)} label="Contact" />
+          <Hidden smDown>
+            <div className={classes.logoContainer}>
+                <Typography className={classes.logo}>MY</Typography>
+            </div>
+
+          </Hidden>
+          <Tabs className={classes.tabs} valueTab={value} onChange={handleChange}>
+              <Tab  className={classes.tab} onClick={()=>handleScroll(0)}   label="Home" value={0} {...a11yProps(0) }/>
+              <Tab className={classes.tab} onClick={()=>handleScroll(750)}  label="About"value={1}  {...a11yProps(1) }/>
+              <Tab className={classes.tab} onClick={()=>handleScroll(2120)}  label="Work" value={2} {...a11yProps(2) }/>
+              <Tab className={classes.tab} onClick={()=>handleScroll(3440)}  label="Contact" value={3}{...a11yProps(3) } />
           </Tabs>
         </Toolbar>
       </AppBar>
@@ -64,6 +81,10 @@ const useStyles =  makeStyles((theme) => ({
           
       marginRight: '1rem',
     },
+    [theme.breakpoints.down("sm")]: {
+          
+      marginLeft: '0rem',
+    },
   },
   tab: {
     fontWeight: "bold",
@@ -71,6 +92,11 @@ const useStyles =  makeStyles((theme) => ({
     "&:hover": {
       borderBottom: "3px solid white",
     },
+    [theme.breakpoints.down("sm")]: {
+          
+      fontSize: "1rem",
+    },
+
   },
   logoContainer:{
     display: 'flex',
